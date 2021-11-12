@@ -25,20 +25,27 @@ public class CustomSwordCommand implements CommandExecutor {
             System.err.println("Uniquement les joueurs peuvent utilisé cette commande !");
         }
         Player player = (Player) sender;
-        CustomSwordInventory = Bukkit.getServer().createInventory(null, 27, customSword.getConfStr("gui.title"));
-        InitInventory();
+        CustomSwordInventory = customSword.getServer().createInventory(null, 27, customSword.getConfStr("gui.title"));
+        InitInvenory();
         player.openInventory(CustomSwordInventory);
         return false;
     }
 
-    private void InitInventory() {
-        for(String customSwordID : customSword.getConfig().getConfigurationSection("CustomSword").getKeys(true)){
-            ItemStack test = new ItemStack(Material.ACACIA_DOOR);
-            ItemMeta testmeta = test.getItemMeta();
-            testmeta.setDisplayName(customSwordID);
-            CustomSwordInventory.addItem(test);
+    private void InitInvenory() {
 
+        for(String CustomSwordID : customSword.getConfig().getConfigurationSection("CustomSword").getKeys(false)){
+            String PartialPath = "CustomSword." + CustomSwordID;
+            String name;
+            name = customSword.getConfStr(PartialPath + ".name");
+            ItemStack customSwordItem = new ItemStack(Material.DIAMOND_SWORD);
+            ItemMeta customSwordItemMeta = customSwordItem.getItemMeta();
+            customSwordItemMeta.hasLore();
+            customSwordItemMeta.setDisplayName(name);
+            customSwordItem.setItemMeta(customSwordItemMeta);
+            CustomSwordInventory.addItem(customSwordItem);
         }
+
+
     }
 
 

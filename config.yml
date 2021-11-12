@@ -18,7 +18,7 @@ Cooldown:
   message: "Vous devez attendre {time}, avant de réutilisé cette capacité !"
 CustomSword:
   MaSuperEpee:
-    name: "MaSuperEpee"
+    name: "&5Ma&cSuper&6Epee"
     description:
       - "&9Ma Super Epee tranche vraiment bien"
       - "&4Ne touche pas la lame sa coupeeee !"
