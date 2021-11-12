@@ -1,0 +1,9 @@
+name: CustomSword
+author: Melv1no
+website: https://github.com/Melv1no
+version: 1.0.0
+main: fr.melv1no.customsword.CustomSword
+commands:
+  cs:
+    permission: cs.use
+    permission-message: "§cVous n'avez pas la permission ( cs.use ) d'utiliser cette commande !"
