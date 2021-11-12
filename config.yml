@@ -8,5 +8,31 @@ plugin:
 ############################
 #       GUI CONFIG         #
 ############################
-title: "§5Custom Sword"
+gui:
+  title: "§5Custom Sword"
+############################
+#       GUI CONFIG         #
+############################
+Cooldown:
+  bypass-permission: "cs.bypass.cooldown"
+  message: "Vous devez attendre {time}, avant de réutilisé cette capacité !"
+CustomSword:
+  MaSuperEpee:
+    name: "MaSuperEpee"
+    description:
+      - "&9Ma Super Epee tranche vraiment bien"
+      - "&4Ne touche pas la lame sa coupeeee !"
+    enchantement:
+      sharpness: 5
+      fireaspect: 2
+      unbreaking: 3
+    onClick:
+      giveEffect:
+        speed:
+          modifier: 2
+          time: 15
+          cooldown: 30
+      message: "Vous avez un effet de speed 2 durant 15 seconde !"
+
+
 
