@@ -17,22 +17,41 @@ Cooldown:
   bypass-permission: "cs.bypass.cooldown"
   message: "Vous devez attendre {time}, avant de réutilisé cette capacité !"
 CustomSword:
-  MaSuperEpee:
-    name: "&5Ma&cSuper&6Epee"
+  PoisonSword:
+    name: "&5PoisonSword"
+    description:
+      - "&4 20% de chance d'enpoisonée votre enemy !"
+      - "&4Ne touche pas la lame sa coupeeee !"
+    onHitPlayer:
+      potionEffect:
+        effect: "Poison"
+        modifier: 1
+        time: 15
+        percentage: 20
+  SlowSword:
+    name: "&5SlowSword"
     description:
       - "&9Ma Super Epee tranche vraiment bien"
       - "&4Ne touche pas la lame sa coupeeee !"
-    enchantement:
-      sharpness: 5
-      fireaspect: 2
-      unbreaking: 3
-    onClick:
-      giveEffect:
-        speed:
-          modifier: 2
-          time: 15
-          cooldown: 30
-      message: "Vous avez un effet de speed 2 durant 15 seconde !"
+    onHitPlayer:
+      potionEffect:
+        effect: "Poison"
+        modifier: 1
+        time: 15
+        percentage: 20
+  VampireSword:
+    name: "&5VampireSword"
+    description:
+      - "&9Ma Super Epee tranche vraiment bien"
+      - "&4Ne touche pas la lame sa coupeeee !"
+    onHitPlayer:
+      potionEffect:
+        effect: "Poison"
+        modifier: 1
+        time: 15
+        percentage: 20
+
+
 
 
 
